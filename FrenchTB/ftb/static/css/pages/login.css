@@ -1,0 +1,47 @@
+@import url(/static/css/material_theme/theme.css);
+@import url(/static/css/components/component.css);
+
+body {
+    background-color: var(--md-sys-color-background-light);
+    height: 100vh;
+    background-image:
+    url("/static/img/pic/France_Map.svg");
+    /* linear-gradient(black,
+    black); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.form-signin {
+    /* max-width: 340px; */
+
+    display: block;
+    padding: 4rem 4rem;
+    backdrop-filter: blur(2rem) saturate(120%);
+    background-color: rgba(255, 255, 255, 0.205);
+    box-shadow: -4px -4px 10px 0px #FFFFFF,
+    4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.form-signin input[type="username"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.form-signin input[type="imagecode"] {
+    margin-bottom: 10px;
+}
+.form-signin input[type="confirmpassword"] {
+    margin-bottom: 10px;
+}
+
+#login {
+    background-color: var(--md-sys-color-background-light);
+}

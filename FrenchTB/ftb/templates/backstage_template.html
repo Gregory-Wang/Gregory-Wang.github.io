@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-5.3.0/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-table/bootstrap-table.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-icons-1.10.3/font/bootstrap-icons.css' %}">
+    <link href="{% static 'css/sidebars.css' %}" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+
+      <style>
+        .sidebar {
+          position: relative;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 100;
+          /* padding: 48px 0 0; */
+          box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        }
+        .sidebar .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .sidebar .nav-link.active {
+            color: #2470dc;
+        }
+      </style>
+      {% block css %}
+      
+      {% endblock %}
+    
+    
+
+</head>
+
+<body class="d-flex flex-column" style="overflow: hidden;">
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" style="height: 60px;">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
+      <img style="height: 2rem; padding-right: 1rem;" src="{% static 'img/icon/logo_corpus_cp_w.svg' %}" alt="CORPUS Logo">
+      <span class="lead">科尔普词典管理系统</span>
+    </a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="dropdown text-end px-3">
+      <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        {{ request.session.info.username }}
+        <img src="{% static 'img/tp_1.png' %}" alt="用户" width="32" height="32" class="rounded-circle">
+      </a>
+      <ul class="dropdown-menu dropdown-menu-lg-end">
+        <li><a class="dropdown-item" href="#">我的资料</a></li>
+        <li><a class="dropdown-item" href="#">偏好设置</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="/logout/">退出</a></li>
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="container-fluid" style="height: 100%; bottom: 0;">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse" >
+        <div class="position-sticky pt-3 sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/backstage/dashboard/" id="dashboard">
+                <i class="bi-speedometer2" style="font-size: 1rem; margin-right: .5rem!important;"></i>
+                监控
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/backstage/account/" id="account">
+                <i class="bi-person-circle" style="font-size: 1rem; margin-right: .5rem!important;"></i>
+                账号管理
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/backstage/term/" id="term">
+                <i class="bi-journal-text" style="font-size: 1rem; margin-right: .5rem!important;"></i>
+                词库管理
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/backstage/notification/" id="notification">
+                <i class="bi-megaphone" style="font-size: 1rem; margin-right: .5rem!important;"></i>
+                通知管理
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/backstage/feedback/" id="feedback">
+                <i class="bi bi-patch-exclamation" style="font-size: 1rem; margin-right: .5rem!important;"></i>
+                反馈管理
+              </a>
+            </li>
+            
+          </ul>
+          
+        </div>
+      </nav>
+  
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="overflow-y: scroll; height: auto;">
+        
+        {% block content %}
+        
+        {% endblock %}
+      </main>
+    </div>
+  </div>
+    
+      <script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+      <script src="{% static 'plugins/bootstrap-5.3.0/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/sidebars.js' %}"></script>
+      <script src="{% static 'plugins/bootstrap-table/bootstrap-table.min.js' %}"></script>
+      <script type="text/JavaScript">
+        $('#{{ active_menu }}').addClass("active");
+      </script>
+
+</body>
+
+</html>

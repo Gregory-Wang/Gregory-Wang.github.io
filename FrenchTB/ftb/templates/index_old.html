@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-5.3.0/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homepage/index_new.css' %}">
+
+</head>
+<body data-spy="scroll" data-target="#navbar-example">
+  <!-- 头部界面 -->
+  <!-- 宽距容器 -->
+  <div class="fluid-container">
+    
+    <!-- 横幅-顶部 -->
+    <div class="banner-top">
+
+      <!-- 窄距容器 -->
+      <div class="container">
+
+        <!-- 横栏-顶部 -->
+        <div class="bar-top">
+
+          <!-- 导航栏 -->
+          <div class="navbar">
+            <li>
+              <img style="height: 36px;" src="{% static 'img/icon/logo_corpus_og.svg' %}" alt="CORPUS Logo">
+            </li>
+            <div class="navbar-right">
+              <button class="bttn style-border-rect bttn-white">登录</button>
+              <button class="bttn style-border-rect bttn-white">注册</button>
+            </div>
+            
+          </div>
+
+          <!-- 标题 -->
+          <div class="title">
+            <li style="font-size: 20px; letter-spacing: 20px;">新冠肺炎疫情</li>
+            <li style="font-size: 32px; font-weight: bold; letter-spacing: 40px;">中法文术语库</li>
+            <li style="font-size: 16px; letter-spacing: 8px;">Mots et expressions de la Covid-19</li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 术语检索部件 -->
+  <!-- 宽距容器 -->
+  <div class="fluid-container">
+    
+    <!-- 横栏-中部 -->
+    <div class="banner-mid">
+
+      <!-- 窄距容器 -->
+      <div class="container">
+        <div class="bar-mid">
+          <div class="trending">
+            <li style="width: 64px; font-size: 16px;
+            font-weight: bold;">最新热词</li>
+            <div class="scroll-belt">
+              <button class="bttn bttn-small style-vibe-neum style-border-round">居家隔离措施</button>
+              <button class="bttn bttn-small style-vibe-neum style-border-round">阴性证明</button>
+              <button class="bttn bttn-small style-vibe-neum style-border-round">常态化防控</button>
+            </div>
+            
+          </div>
+          <div class="bar-search">
+            <input type="search" class="input-search style-border-round" placeholder="请输入需要搜索的术语">
+            <button class="bttn bttn-small style-vibe-neum style-border-round" id="btn-search" alt="搜索">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <!-- 正文界面 -->
+  <!-- 宽距容器 -->
+  <div class="fluid-container">
+    
+    <!-- 正文-背景 -->
+    <div class="content-bg">
+
+      <!-- 窄距容器 -->
+      <div class="container">
+
+        <!-- 正文-常用分类 -->
+        <div class="content-catagory">
+          <!-- 正文-常用分类-导航条 -->
+          <div class="content-catagory-bar style-border-round">
+            <li>常用分类</li>
+            <buttom class="bttn bttn-small style-vibe-neum style-border-round" id="more-cata">更多分类</buttom>
+          </div>
+          <!-- 正文-常用分类-卡片面板 -->
+          <div class="content-catagory-panel">
+            <button class="card card-catagory style-border-round style-vibe-neum-inset">
+              <img style="height: 48px;" src="{% static 'img/index/icon-shield.svg' %}" alt="决策部署">
+              <span>决策部署</span>
+              <span>共收录89条词条</span>
+            </button>
+            <button class="card card-catagory style-border-round style-vibe-neum-inset">
+              <img style="height: 48px;" src="{% static 'img/index/icon-mask.svg' %}" alt="防控救治">
+              <span>防控救治</span>
+              <span>共收录89条词条</span>
+            </button>
+            <button class="card card-catagory style-border-round style-vibe-neum-inset">
+              <img style="height: 48px;" src="{% static 'img/index/icon-convo.svg' %}" alt="专有名词">
+              <span>专有名词</span>
+              <span>共收录89条词条</span>
+            </button>
+            <button class="card card-catagory style-border-round style-vibe-neum-inset">
+              <img style="height: 48px;" src="{% static 'img/index/icon-hospital.svg' %}" alt="机构场所">
+              <span>机构场所</span>
+              <span>共收录89条词条</span>
+            </button>
+            <button class="card card-catagory style-border-round style-vibe-neum-inset">
+              <img style="height: 48px;" src="{% static 'img/index/icon-open_arms.svg' %}" alt="社会生活">
+              <span>社会生活</span>
+              <span>共收录89条词条</span>
+            </button>
+            <button class="card card-catagory style-border-round style-vibe-neum-inset">
+              <img style="height: 48px;" src="{% static 'img/index/icon-earth.svg' %}" alt="其他词汇">
+              <span>其他词汇</span>
+              <span>共收录89条词条</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 正文-反馈-->
+        <div class="content-feedback style-border-round">
+          <div class="content-feedback-left">
+            <li>找不到相关词条？</li>
+            <li>如果您有任何的使用问题或更改建议，<br>请联系我们，帮助我们变得更好:P</li>
+            <button class="bttn style-border-rect bttn-white">点我反馈</button>
+          </div>
+          <div class="content-feedback-right">
+            <img src="{% static 'img/index/online_world_pana.svg' %}" alt="反馈插画">
+          </div>
+        </div>
+
+        <!-- 正文-页脚 -->
+        <div class="content-footer style-border-round">
+          <div class="content-footer-left">
+            <img style="height: 36px;" src="{% static 'img/index/CORPUS_SCBC_Logo.svg' %}" alt="CORPUS SCBC Logo">
+          </div>
+          <div class="content-footer-right">
+            <li><a herf="#">关于CORPUS</a></li>
+            <li><a herf="#">关于我们</a></li>
+            <li><a herf="#">功能介绍</a></li>
+            <li><a herf="#">使用说明</a></li>
+            <li><a herf="#">联系我们</a></li>
+          </div>
+        </div>
+        
+
+        <div style="">
+          <span>Optimisé par XXX et XXX</span>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+
+
+  <script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+  <script src="{% static 'plugins/bootstrap-5.3.0/js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/index.js' %}"></script>
+  <script src="{% static 'js/register.js' %}"></script>
+  
+
+</body>
+</html>

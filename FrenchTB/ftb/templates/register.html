@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/register.css">
+    <script src="static/plugins/jQuery/jquery.min.js"></script>
+    <script src="static/plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+    
+    
+</head>
+<body>
+    <div class="container-stretch">
+
+        <div class="container">
+
+            <!-- 账号面板 -->
+            <div class="account">
+                <div class="account-board">
+
+                    <div class="welcome-mask">
+                        <div class="welcome-musk-panel">
+                            <div class="content-sheet">
+
+                                <!-- 左侧登录欢迎页 -->
+                                <div class="sheet-panel">
+                                    <section id="sheet-title">
+                                        <span style="font-size: 32px; font-weight: bold;">欢迎来到<br>法语术语库</span>
+                                        
+                                    </section>
+                                    <section id="sheet-img">
+                                        <span>
+                                            <svg width="194" height="313" viewBox="0 0 194 313" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M163.152 247.72C174.151 265.756 184.509 282.744 191.554 305.97C192.319 308.492 190.404 311 187.768 311H161.32C159.436 311 157.816 309.682 157.357 307.855C149.241 275.552 125.287 252.143 97 252.143C68.7129 252.143 44.759 275.552 36.6429 307.855C36.1838 309.682 34.5639 311 32.6796 311H6.23219C3.59617 311 1.68057 308.492 2.44571 305.97C9.49053 282.744 19.8494 265.756 30.8476 247.72C50.7626 215.06 72.7737 178.963 81 96.1714V32.3631C81 31.7484 80.8583 31.1419 80.5859 30.5908L77.0505 23.4378C76.7781 22.8867 76.6364 22.2802 76.6364 21.6654V18.8413C76.6364 17.5115 77.2973 16.2686 78.3998 15.525L84.3499 11.5123C85.0106 11.0666 85.7894 10.8286 86.5864 10.8286H90.0909C92.3001 10.8286 94.0909 9.03771 94.0909 6.82857V4.90909C94.0909 3.30244 95.3934 2 97 2V2C98.6067 2 99.9091 3.30244 99.9091 4.90909V6.82857C99.9091 9.03771 101.7 10.8286 103.909 10.8286H107.414C108.211 10.8286 108.989 11.0666 109.65 11.5123L115.6 15.525C116.703 16.2686 117.364 17.5115 117.364 18.8413V21.6654C117.364 22.2802 117.222 22.8867 116.95 23.4378L113.414 30.5908C113.142 31.1419 113 31.7484 113 32.3631V96.1714C121.226 178.963 143.237 215.06 163.152 247.72ZM80.7506 194.852L78.1589 207.305C76.1107 217.147 75.0866 222.068 77.7062 225.334C80.3257 228.6 85.2968 228.6 95.2391 228.6H98.7609C108.703 228.6 113.674 228.6 116.294 225.334C118.913 222.068 117.889 217.147 115.841 207.305L113.249 194.852C111.991 188.803 111.361 185.779 109.328 183.871C109.045 183.605 108.745 183.359 108.43 183.134C106.166 181.514 103.11 181.514 97 181.514C90.8896 181.514 87.8344 181.514 85.5699 183.134C85.2547 183.359 84.9547 183.605 84.6718 183.871C82.6388 185.779 82.0094 188.803 80.7506 194.852Z" stroke="#2F80ED" stroke-width="4"/>
+                                                </svg>
+                                        </span>
+                                    </section>
+                                    <section id="sheet-link">
+                                        <span>还没有账户？</span>
+                                        <button type="button" class="btn-m" id="account-register-btn">注册</button>
+                                    </section>
+                                </div>
+
+                                <!-- 右注册欢迎页 -->
+                                <div class="sheet-panel">
+                                    <section id="sheet-title">
+                                        <span style="font-size: 32px; font-weight: bold;">欢迎来到<br>法语术语库</span>
+                                        
+                                    </section>
+                                    <section id="sheet-img">
+                                        <span>
+                                            <svg width="256" height="216" viewBox="0 0 256 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M87.5 115.632V210C87.5 212.209 85.7091 214 83.5 214L6 214C3.79086 214 2 212.209 2 210V6C2 3.79086 3.79086 2 6 2H250C252.209 2 254 3.79086 254 6V210C254 212.209 252.209 214 250 214L172.5 214C170.291 214 168.5 212.209 168.5 210V115.632C168.5 105.089 164.233 94.9788 156.638 87.5242C140.822 72.0009 115.178 72.0009 99.3622 87.5242C91.767 94.9788 87.5 105.089 87.5 115.632Z" stroke="#EB5757" stroke-width="4"/>
+                                                </svg>                                                
+                                        </span>
+                                    </section>
+                                    <section id="sheet-link">
+                                        <span>已经有账户？</span>
+                                        <button type="button" class="btn-m" id="account-login-btn">登录</button>
+                                    </section>
+                                </div>
+
+                                
+                                
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- 注册面板 -->
+                    <div class="side-panel" id="right">
+                        <h1 >注册</h1>
+                        <form method="post" class="input-sheet" action="#">
+                            <ul>
+                                <li>
+                                    <label class="input-placeholder">用户名</label>
+                                    <input type="text" autocomplete="username" name="user">
+                                </li>
+                                <li>
+                                    <!-- <header>邮箱</header> -->
+                                    <label class="input-placeholder">邮箱</label>
+                                    <input type="email" autocomplete="email" name="email" placeholder="邮箱">
+                                </li>
+                                <li>
+                                    <label class="input-placeholder">密码</label>
+                                    <input type="password" autocomplete="current-password" name="pwd" placeholder="密码">
+                                </li>
+                                <li>
+                                    <label class="input-placeholder">确认密码</label>
+                                    <input type="password" autocomplete="new-password" placeholder="确认密码">
+                                </li>
+                            </ul>
+
+                            <div class="side-panel-button-wrap">
+                                <input type="submit" class="form-button" value="注册">
+                            </div>
+                            
+                        </form>
+
+                        <!-- <style> #emailfield { display: none; } </style> 
+                        <form id="login" action="login.php" method="post"> 
+                            <input id="emailfield" type="text" value="me@example.test" autocomplete="username"> 
+                            <input type="password" autocomplete="current-password"> 
+                            <input type="submit" value="Sign In!"> 
+                        </form> -->
+                    </div>
+
+                    <!-- 登录面板 -->
+                    <div class="side-panel" id="left">
+                        <h1>登录</h1>
+                        <form method="post" class="input-sheet" action="#">
+                            <ul>
+                                <li>
+                                    <label class="input-placeholder">用户名</label>
+                                    <input type="text" autocomplete="username" name="user">
+                                <li>
+                                    <label class="input-placeholder">密码</label>
+                                    <input type="password" autocomplete="current-password" name="pwd" placeholder="密码">
+                                </li>
+                            </ul>
+
+                            <div class="side-panel-button-wrap">
+                                <input type="submit" class="form-button" value="注册">
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="static/js/register.js"></script>
+
+</body>
+</html>

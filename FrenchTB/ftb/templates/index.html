@@ -1,0 +1,182 @@
+{% extends "index_template.html" %}
+{% load static %}
+{% block title %}
+中法语在线术语库 | 首页
+{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block content %}
+
+  <section class="text-center text-md-start" style="height: 240px; width: auto;" id="intro-banner">
+    <div class="container-sm d-flex align-items-end h-100">
+      <div class="title text-white bg-opacity-10" style="height: fit-content;">
+        <li style="font-size: 1rem; letter-spacing: 20px; transform: translateX(1rem);">
+          <mark style="background-color:rgba(0, 75, 156, 0.815);">新冠肺炎疫情</mark>
+        </li>
+        <li class="lead" style="font-size: 1.5rem; font-weight: bold; letter-spacing: 40px; transform: translateX(2rem);">
+          <mark style="background-color:hsla(0, 0%, 100%, 0.9); color: rgb(0, 0, 0);">中法语术语库</mark>
+        </li>
+        <li style="font-family: 'Courier New', Courier, monospace; font: bold; font-size: 0.5rem; letter-spacing: 8px;">
+          <mark style="background-color:hsla(0, 88%, 51%, 0.8); color: rgb(255, 255, 255);">Mots et expressions de la Covid-19</mark>
+        </li>
+      </div>
+      
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+    </div>
+  </section>
+
+  <section id="section-start">
+    <div class="container mx-auto p-4 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+          <span class="lead display-6" style="width: fit-content;">
+            简单上手
+          </span>
+        </a>
+      </header>
+    
+      <main>
+        <h1>
+          <span class="sketch-highlight">搜索术语</span>
+        </h1>
+        <p class="fs-5 col-md-8">
+          通过搜索框输入术语，即可查看术语的中文与法语的对照翻译、术语来源、术语分类、术语定义、术语用法、术语相关术语等信息。
+        </p>
+    
+        <form class="d-flex col-md-8" role="search">
+          <input class="form-control me-2" type="search" placeholder="搜索术语" aria-label="Search">
+          <button class="btn btn-primary" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+          
+        </form>
+    
+        <hr class="col-3 col-md-2 mb-5">
+    
+        <div class="row g-5 d-flex align-items-center">
+          <div class="col-md-6">
+            <h2>按分类浏览</h2>
+            <p>
+              通过分类浏览，可以查看各个分类下的术语，点击术语即可查看术语的详细信息。
+            </p>
+            <ul class="icon-list ps-0">
+              <li class="d-flex align-items-start mb-1">
+                <a href="#term-catagory"
+                rel="noopener">
+                转到相关术语分类</a>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="col-md-6">
+            <div style="height: fit-content; width: fit-content; margin: auto;">
+              <img style="min-height: 6rem; opacity: 80%;" src="{% static 'img/pic/Bonjour.svg' %}" alt="Bonjour">
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <section id="term-catagory"
+  data-bs-spy="scroll" data-bs-target="#term-catagory"
+  data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+    <div class="container d-flex align-items-center align-items-md-start" style="flex-direction: column;">
+
+      
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+          <span class="lead display-6" style="width: fit-content;">
+            相关<span class="sketch-highlight">术语分类</span>
+          </span>
+        </a>
+      </header>
+      
+      <div class="row">
+
+        <div class="col">
+          <div class="card card-catagory style-border-round style-vibe-neum-inset">
+            <img style="height: 48px;" src="{% static 'img/index/icon-shield.svg' %}" alt="决策部署">
+            <span>决策部署</span>
+            <span>共收录89条词条</span>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-catagory style-border-round style-vibe-neum-inset">
+            <img style="height: 48px;" src="{% static 'img/index/icon-mask.svg' %}" alt="防控救治">
+            <span>防控救治</span>
+            <span>共收录89条词条</span>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-catagory style-border-round style-vibe-neum-inset">
+            <img style="height: 48px;" src="{% static 'img/index/icon-convo.svg' %}" alt="专有名词">
+            <span>专有名词</span>
+            <span>共收录89条词条</span>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-catagory style-border-round style-vibe-neum-inset">
+            <img style="height: 48px;" src="{% static 'img/index/icon-hospital.svg' %}" alt="机构场所">
+            <span>机构场所</span>
+            <span>共收录89条词条</span>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-catagory style-border-round style-vibe-neum-inset">
+            <img style="height: 48px;" src="{% static 'img/index/icon-open_arms.svg' %}" alt="社会生活">
+            <span>社会生活</span>
+            <span>共收录89条词条</span>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-catagory style-border-round style-vibe-neum-inset">
+            <img style="height: 48px;" src="{% static 'img/index/icon-earth.svg' %}" alt="其他词汇">
+            <span>其他词汇</span>
+            <span>共收录89条词条</span>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-catagory style-border-round style-vibe-neum-inset">
+            <img style="height: 48px;" src="{% static 'img/index/icon-earth.svg' %}" alt="热点文摘">
+            <span>新冠热点文摘</span>
+            <span>持续收录要点术语</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="py-5 text-center text-md-start" id="section-feedback">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row" style="justify-content: space-between">
+        <div class="d-flex flex-column justify-content-center align-content-center">
+          <h1><strong>找不到相关词条？</strong></h1>
+          <p class="my-4">如果您有任何的使用问题或更改建议，<br>请联系我们，帮助我们变得更好:P</p>
+          <button class="btn btn-primary btn-large">点我反馈</button>
+        </div>
+        <img class="w-50 d-none d-md-block" src="{% static 'img/index/online_world_pana.svg' %}" alt="反馈插画">
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}

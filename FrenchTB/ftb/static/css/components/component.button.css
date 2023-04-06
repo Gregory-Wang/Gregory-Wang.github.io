@@ -1,0 +1,75 @@
+@import url(/static/css/material_theme/theme.css);
+
+.icon-fix {
+    margin: 0 0.5rem;
+    transform: translateY(1px);
+}
+
+/* 基础按钮类 */
+.bttn {
+    caret-color: transparent;
+    display: flex;
+    border: none;
+    /* width: fit-content;
+    height: 32px;
+    padding: 0px 12px; */
+    /* border-radius: 20px;
+    background: var(--md-sys-color-primary-container-light);
+    color: var(--md-sys-color-on-primary-container-light); */
+    font-style: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    color: var(--md-sys-color-on-surface-variant-light);
+}
+
+
+
+
+
+
+/* 小按钮 */
+.bttn-small {
+    /* "flex: none" Flex布局中解决overflow不生效的问题 */
+    flex: none; 
+    width: fit-content;
+    height: 36px;
+    padding: 0px 12px;
+    background: var(--md-sys-color-primary-container-light);
+    color: var(--md-sys-color-on-primary-container-light);
+}
+.bttn-small:hover {
+    /* transform: translateY(-4px); */
+    /* background: var(--md-ref-palette-primary95); */
+    background: var(--md-sys-color-surface1-light);
+}
+.bttn-small:active {
+    /* transform: translateY(2px); */
+    background: var(--md-ref-palette-primary95);
+    /* background: var(--md-sys-color-primary-container-light); */
+
+}
+
+.bttn-white {
+    width: fit-content;
+    height: 32px;
+    padding: 0px 16px;
+    font-weight: bold;
+    background: var(--md-sys-color-primary-container-light);
+    color: var(--md-sys-color-primary-light);
+}
+.bttn-white:hover {
+    /* transform: translateY(-4px); */
+    background: var(--md-sys-color-surface1-light);
+    color: var(--md-sys-color-primary-light);
+}
+.bttn-white:active {
+    /* transform: translateY(2px); */
+    background: var(--md-sys-color-primary-light);
+    color: var(--md-sys-color-surface1-light);
+    /* background: var(--md-sys-color-primary-container-light); */
+
+}

@@ -1,0 +1,153 @@
+{% extends "backstage_template.html" %}
+{% load static %}
+{% block title %}
+词库管理 | 法语在线术语库
+{% endblock %}
+
+{% block css %}
+<style>
+  thead {
+    
+    white-space: nowrap;
+  }
+  thead tr th {
+    z-index: 3; 
+    position: sticky;
+    min-width: 80px;
+    top: 0;
+    /* border-bottom: 4px solid rgb(59, 59, 59); */
+  }
+  /* 右侧操作栏冻结 */
+  table thead tr th:last-child{
+    /* display: block; */
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    right: 0;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.178); */
+  }
+  table tbody tr td:last-child {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    /* z-index: 3; */
+    position: sticky;
+    right: 0;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.178); */
+  }
+</style>
+
+
+{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+  <section class="w-100">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        你目前所在：
+        <!-- <li class="breadcrumb-item"><a href="#">Library</a></li> -->
+        <li class="breadcrumb-item active" aria-current="page">词库管理</li>
+      </ol>
+    </nav>
+  </section>
+
+  <section class="w-100">
+    <!-- 功能面板-新建-搜索 -->
+    <div>
+      <!-- 按钮-新建词条 -->
+      <a class="btn btn-success btn-primary" href="/backstage/term/add/">
+        <i class="bi bi-plus"></i>新建词条</a>
+      <!-- 组件-搜索组件 -->
+      <form class="input-group mb-3" method="get" style="float: right; width: 30%;" role="search">
+
+        <input type="text" class="form-control" placeholder="搜索词条" name="q" value="{{ search_data }}">
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
+          <i class="bi bi-search" style="width: 16px; height: 16px;"></i>
+        </button>
+        </span>
+      </form>
+    </div>
+  </section>
+
+  
+</div>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <section class=" w-100" style="height: fit-content;">
+    <!-- 表格面板 -->
+    <div class="d-flex justify-content-left" style="
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+      border-spacing: 0;
+      word-wrap:break-all;
+      word-break:break-all;
+      table-layout:fixed;
+    ">
+      <!-- <table class="table" style="word-wrap:break-all; word-break:break-all; table-layout:fixed;"> -->
+      <table class="table table-hover" style="height: 20rem;">
+        <caption>当前搜索：{{ search_data }}</caption>
+        <thead class="table-light">
+          <tr>
+            <th>ID</th>
+            <th>中文</th>
+            <th>法语</th>
+            <th>类似表达</th>
+            <th>来源</th>
+            <th>定义</th>
+            <th>例句</th>
+            <th>分类</th>
+            <th>标签</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody style="white-space: nowrap; overflow: hidden;">
+        {% for obj in data_table %}
+          <tr>
+            <th scope="row">{{ obj.id }}</th>
+            <td>{{ obj.chinese }}</td>
+            <td>{{ obj.french }}</td>
+            <td>{{ obj.similar }}</td>
+            <td>{{ obj.source }}</td>
+            <td>{{ obj.definition }}</td>
+            <td>{{ obj.example }}</td>
+            <td>{{ obj.get_cata_display }}</td>
+            <td>{{ obj.tag }}</td>
+            <!-- <td>******</td> -->
+            <td>
+                <a class="btn btn-outline-primary btn-sm" href="/term/{{ obj.id }}/edit/">编辑</a>
+                <a class="btn btn-danger btn-sm" href="/term/{{ obj.id }}/delete/">删除</a>
+                
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  
+</div>
+<!-- 分页组件 -->
+<section class="p-3 d-flex justify-content-center">
+  <nav aria-label="Page navigation">
+  <ul class="pagination">
+    {{ page_string }}
+  </ul>
+</nav>
+</section>
+
+
+  {% endblock %}
+
+  {% block js %}
+  
+
+ 
+
+
+                                    
+            
+</script>
+  {% endblock %}

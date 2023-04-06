@@ -1,0 +1,46 @@
+@import url(/static/css/material_theme/theme.css);
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+    padding: 36px 24px;
+
+    caret-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background-color: var(--md-sys-color-background-light);
+
+    color: var(--md-sys-color-on-surface-variant-light);
+}
+
+.card-catagory {
+    background: url("/static/img/index/french_flag.svg"),
+    var(--md-sys-color-background-light);
+
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 146%;
+    border: 1px solid var(--md-sys-color-surface-variant-light);
+}
+.card-catagory:hover {
+    background: url("/static/img/index/french_flag.svg"),
+    var(--md-sys-color-background-light);;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 102%;
+}
+.card-catagory > span {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--md-sys-color-primary-light);
+}
+.card-catagory > span ~ span {
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: var(--md-sys-color-on-surface-variant-light);
+}

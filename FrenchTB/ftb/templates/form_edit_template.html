@@ -1,0 +1,75 @@
+{% extends "backstage_template.html" %}
+{% load static %}
+{% block title %}
+词库管理 | 法语在线术语库
+{% endblock %}
+
+{% block css %}
+
+<style>
+    .input-group>.form-control, 
+    .input-group>.form-select {
+        position: relative;
+        flex: 1 1 auto;
+        flex-direction: column;
+        width: 100%;
+        height: 100px;
+        min-width: 0;
+    }
+  </style>
+
+{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+  <section class="w-100">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        你目前所在：
+        <!-- <li class="breadcrumb-item"><a href="#">Library</a></li> -->
+        <li class="breadcrumb-item active" aria-current="page">词库管理</li>
+      </ol>
+    </nav>
+  </section>
+
+  <section class="w-100">
+    
+    <form method="post" novalidate>
+        {% csrf_token %}
+        
+        <div class="row">
+            {% for field in form %}
+            <div class="col-6">
+                <div class="input-group mb-3" style="position: relative;">
+                    <label for="{{ field.name }}" class="form-label">{{ field.label }}</label>
+                    {{ field }}
+                    <span style="color: red;">{{ field.errors.0 }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <button type="submit" class="btn btn-primary">保存</button>
+        
+    </form>
+  </section>
+
+  
+</div>
+
+
+
+
+  {% endblock %}
+
+  {% block js %}
+  
+
+ 
+
+
+                                    
+            
+</script>
+  {% endblock %}

@@ -1,0 +1,104 @@
+@import url(/static/css/material_theme/theme.css);
+@import url(/static/css/components/component.css);
+
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    position: relative;
+    background-color: var(--md-sys-color-background-light);
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2rem) saturate(120%);
+}
+
+::selection { background:hsla(0, 88%, 51%, 0.8); color:white; } 
+::-moz-selection { background:hsla(0, 88%, 51%, 0.8); color:white;  } 
+::-webkit-selection { background:hsla(0, 88%, 51%, 0.8); color:white;  } 
+
+mark{
+    color: white;
+   }
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /* justify-content: center; */
+    margin: 2rem 0;
+}
+
+
+#intro-banner {
+    display: flex;
+    z-index: -1;
+    width: 100%;
+    height: inherit;
+    background-image:
+    url("/static/img/SCBC_birdview_trans.png");
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    background-size: cover;
+}
+
+#section-start {
+    
+    /* background-color: var(--md-sys-color-background-light); */
+    background-image: 
+    /* linear-gradient(to bottom,
+    var(--md-sys-color-background-light),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.4)), */
+    url("/static/pic/France_Map.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+#term-catagory {
+    display: flex;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    padding: 3rem 0;
+
+    background-color: var(--md-sys-color-background-light);
+    background-image: 
+    /* url("https://www.transparenttextures.com/patterns/cubes.png"), */
+    linear-gradient(to bottom,
+    var(--md-sys-color-background-light),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.4)),
+    url("/static/img/mesh-510.png");
+
+
+    /* background-image:
+    linear-gradient(to bottom,
+    var(--md-sys-color-background-light),
+    var(--md-sys-color-background-light),
+    var(--md-sys-color-background-light),
+    rgba(255, 255, 255, 0)),
+    url("/static/img/mesh-510.png"); */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.row .col {
+    margin: 1rem 0;
+
+    width: auto;
+    min-width: 20rem;
+    height: auto;
+
+}
+
+/* 正文-反馈 */
+#section-feedback {
+    color: var(--md-sys-color-primary-light);
+    /* background: var(--md-sys-color-surface1-light); */
+}

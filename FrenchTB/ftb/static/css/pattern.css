@@ -1,0 +1,11 @@
+.bg-blur {
+    backdrop-filter: blur(10px);
+}
+
+.bg-darken {
+    filter: brightness(0.5) blur(10px);
+}
+
+#rolling {
+    transition: all 0.3s ease 0s;
+}

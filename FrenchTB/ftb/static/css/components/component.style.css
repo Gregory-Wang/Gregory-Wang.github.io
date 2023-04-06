@@ -1,0 +1,83 @@
+
+
+/* 氛围-新拟物风格 */
+.style-vibe-neum {
+    box-shadow: none;
+}
+.style-vibe-neum:hover {
+    box-shadow: -4px -4px 10px 0px #FFFFFF,
+    4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.style-vibe-neum:active {
+    box-shadow: inset -2px -2px 4px 0px #FFFFFF,
+    inset 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.style-vibe-neum:visited {
+    box-shadow: none;
+}
+
+.style-vibe-neum-inset {
+    box-shadow: none;
+}
+.style-vibe-neum-inset:hover {
+    box-shadow: -4px -4px 12px 0px rgba(255, 255, 255, 0.6),
+    4px 4px 12px 0px rgba(0, 0, 0, 0.1);
+}
+.style-vibe-neum-inset:active {
+    box-shadow: inset -2px -2px 8px 0px #FFFFFF,
+    inset 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.style-vibe-neum-inset:visited {
+    box-shadow: none;
+}
+
+/* 边缘-胶囊风格 */
+.style-border-round {
+    border-radius: 20px;
+}
+
+/* 边缘-卡片风格 */
+.style-border-rect {
+    border-radius: 5px;
+}
+
+/* 高亮-手绘风格 */
+.sketch-highlight{
+    position:relative;
+    z-index: 3;
+  }
+  
+  .sketch-highlight:before{
+    content:"";
+    z-index:-1;
+    left:0em;
+    bottom:0em;
+    border-width:2px;
+    border-style:solid;
+    border-color:hsla(0, 88%, 51%, 0.8);
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:0.5em;
+    transform:rotate(2deg);
+    /* opacity:0.5; */
+    border-radius:0.25em;
+  }
+  
+  .sketch-highlight:after{
+    content:"";
+    z-index:-1;
+    left:0em;
+    bottom:0em;
+    border-width:2px;
+    border-style:solid;
+    border-color:hsla(0, 88%, 51%, 0.8);
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:0.5em;
+    transform:rotate(-1deg);
+    /* opacity:0.5; */
+    border-radius:0.25em;
+  }
